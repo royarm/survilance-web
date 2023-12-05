@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <g data-name="Group 3377">
+        <path d="M0 0h24v24H0z" style="fill:none"/>
+        <g data-name="Group 3376">
+            <path data-name="Vector" d="M5.581 1.4H.7A.7.7 0 0 1 0 .7.7.7 0 0 1 .7 0h4.881a.7.7 0 0 1 0 1.4z" transform="translate(11.646 8.391)" style="fill:#aaa"/>
+            <path data-name="Vector" d="M1.393 3.486a.69.69 0 0 1-.493-.2l-.7-.7a.7.7 0 0 1 .988-.986l.2.2L2.993.2a.7.7 0 0 1 .986.986L1.886 3.281a.7.7 0 0 1-.493.205z" transform="translate(6.067 7.007)" style="fill:#aaa"/>
+            <path data-name="Vector" d="M5.581 1.4H.7A.7.7 0 0 1 0 .7.7.7 0 0 1 .7 0h4.881a.7.7 0 0 1 0 1.4z" transform="translate(11.646 14.902)" style="fill:#aaa"/>
+            <path data-name="Vector" d="M1.393 3.486a.69.69 0 0 1-.493-.2l-.7-.7a.7.7 0 0 1 .988-.986l.2.2L2.993.2a.7.7 0 0 1 .986.986L1.886 3.281a.7.7 0 0 1-.493.205z" transform="translate(6.067 13.519)" style="fill:#aaa"/>
+            <path data-name="Vector" d="M12.791 20H7.209C2.158 20 0 17.842 0 12.791V7.209C0 2.158 2.158 0 7.209 0h5.581C17.842 0 20 2.158 20 7.209v5.581c0 5.052-2.158 7.21-7.209 7.21zM7.209 1.4C2.921 1.4 1.4 2.921 1.4 7.209v5.581c0 4.288 1.526 5.814 5.814 5.814h5.581c4.288 0 5.814-1.526 5.814-5.814V7.209c0-4.288-1.526-5.814-5.814-5.814z" transform="translate(2 2)" style="fill:#aaa"/>
+        </g>
+    </g>
+</svg>
