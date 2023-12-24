@@ -34,7 +34,7 @@
   <script src="index.min.js" type="application/javascript"></script>
   <script>
     // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = "1439722122";
+    const serviceWorkerVersion = "609019337";
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
@@ -43,12 +43,16 @@
   <script>
     // Define a function to receive data from Flutter
     function receiveDataFromFlutter(data) {
-      // Do something with the received data
-      console.log("Received data from Flutter:", data);
-      // You can use 'data' as needed in your web view
-      window.myVar =data;
-    }
-    receiveDataFromFlutter();
+
+// Do something with the received data
+console.log("Received data from Flutter:", data);
+// You can use 'data' as needed in your web view
+window.myVar =data;
+}
+function debug(data){
+console.log(data);
+}
+    // receiveDataFromFlutter();
     window.addEventListener('load', function(ev) {
       // Download main.dart.js
       _flutter.loader.loadEntrypoint({
