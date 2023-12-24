@@ -31,16 +31,24 @@
 
   <title>surveillalceui</title>
   <link rel="manifest" href="manifest.json">
-
+  <script src="https://unpkg.com/@zxing/library@0.19.1" type="application/javascript"></script>
   <script>
     // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = "458156316";
+    const serviceWorkerVersion = "4284132733";
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
 </head>
 <body>
   <script>
+    // Define a function to receive data from Flutter
+    function receiveDataFromFlutter(data) {
+      // Do something with the received data
+      console.log("Received data from Flutter:", data);
+      // You can use 'data' as needed in your web view
+      window.myVar =data;
+    }
+    receiveDataFromFlutter();
     window.addEventListener('load', function(ev) {
       // Download main.dart.js
       _flutter.loader.loadEntrypoint({
@@ -48,6 +56,13 @@
           serviceWorkerVersion: serviceWorkerVersion,
         },
         onEntrypointLoaded: function(engineInitializer) {
+                  // Expose myVar to Dart code
+        // _flutter.platform.registerMethodCallReceiver({
+        //   receiveDataFromFlutter: receiveDataFromFlutter,
+        //   getMyVar: function() {
+        //     return myVar;
+        //   },
+        // });
           engineInitializer.initializeEngine().then(function(appRunner) {
             appRunner.runApp();
           });
