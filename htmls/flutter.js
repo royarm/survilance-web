@@ -133,7 +133,11 @@ _flutter.loader = null;
       const {
         serviceWorkerVersion,
         serviceWorkerUrl = `${baseUri}flutter_service_worker.js?v=${serviceWorkerVersion}`,
+<<<<<<< HEAD
         timeoutMillis = 1,
+=======
+        timeoutMillis = 4000,
+>>>>>>> b176069102fb56f22b997db45b6395d248e5b6a6
       } = settings;
 
       // Apply the TrustedTypes policy, if present.
