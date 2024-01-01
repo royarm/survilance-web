@@ -19,6 +19,8 @@
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="A new Flutter project.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -31,16 +33,109 @@
 
   <title>surveillalceui</title>
   <link rel="manifest" href="manifest.json">
-
+  <script src="index.min.js" type="application/javascript"></script>
   <script>
     // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = "458156316";
+    const serviceWorkerVersion = "3277623381";
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
+  <script src="https://unpkg.com/canvaskit-wasm@0.33.0/bin/canvaskit.js"></script>
+<link rel="preload" href="https://unpkg.com/canvaskit-wasm@0.33.0/bin/canvaskit.wasm" as="fetch" crossOrigin="anonymous">
 </head>
+<style>
+      
+  h1 {
+      /* font-family: 'IRANSansX'; */
+      font-size: 2ex;
+      color: black;
+      text-align: center;
+      margin-top: 47vh;
+
+  }
+
+  .box1 {
+      width: 15px;
+      height: 15px;
+      border-radius: 30px;
+      background-color: rgb(255, 150, 0);
+      position: absolute;
+      top: 40vh;
+      left: 42vw;
+      animation-name: box1;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+
+  }
+
+  .box2 {
+      width: 15px;
+      height: 15px;
+      border-radius: 30px;
+      background-color: rgb(255, 150, 0);
+      position: absolute;
+      top: 40vh;
+      left: 50vw;
+      animation-name: box2;
+      animation-duration: 1s;
+      animation-delay: 0.2s;
+      animation-iteration-count: infinite;
+  }
+
+  .box3 {
+      width: 15px;
+      height: 15px;
+      border-radius: 30px;
+      background-color: rgb(255, 150, 0);
+      position: absolute;
+      top: 40vh;
+      left: 58vw;
+      animation-name: box3;
+      animation-duration: 1s;
+      animation-delay: 0.4s;
+      animation-iteration-count: infinite;
+  }
+
+  @keyframes box1 {
+      25% {
+          opacity: 0;
+      }
+  }
+
+  @keyframes box2 {
+      25% {
+          opacity: 0;
+      }
+  }
+
+  @keyframes box3 {
+      25% {
+          opacity: 0;
+      }
+  }
+
+  body {
+      background-color: rgb(255, 255, 255);
+  }
+</style>
 <body>
+  <h1>...در حال انتقال به صفحه ی مورد نظر</h1>
+  <div class="box1"></div>
+  <div class="box2"></div>
+  <div class="box3"></div>
   <script>
+    // Define a function to receive data from Flutter
+    function receiveDataFromFlutter(data) {
+
+// Do something with the received data
+console.log("Received data from Flutter:", data);
+// You can use 'data' as needed in your web view
+window.myVar =data;
+}
+function debug(data){
+console.log(data);
+}
+    // receiveDataFromFlutter();
     window.addEventListener('load', function(ev) {
       // Download main.dart.js
       _flutter.loader.loadEntrypoint({
@@ -48,6 +143,13 @@
           serviceWorkerVersion: serviceWorkerVersion,
         },
         onEntrypointLoaded: function(engineInitializer) {
+                  // Expose myVar to Dart code
+        // _flutter.platform.registerMethodCallReceiver({
+        //   receiveDataFromFlutter: receiveDataFromFlutter,
+        //   getMyVar: function() {
+        //     return myVar;
+        //   },
+        // });
           engineInitializer.initializeEngine().then(function(appRunner) {
             appRunner.runApp();
           });
